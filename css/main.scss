@@ -3,6 +3,7 @@ $color-two: #d6ce93;
 $color-three: #efebce;
 $color-four: #d8a48f;
 $color-five: #bb8588;
+$font-to-all: "Akaya Kanadaka", cursive;
 
 * {
   padding: 0;
@@ -10,10 +11,14 @@ $color-five: #bb8588;
   box-sizing: border-box;
 }
 
+html {
+  font-family: $font-to-all;
+}
+
 .header {
   width: 100%;
   height: 10vh;
-  background: linear-gradient($color-three, $color-one);
+  background-color: $color-one;
 }
 
 .main {
@@ -25,7 +30,6 @@ $color-five: #bb8588;
   background: linear-gradient($color-one, $color-two);
   .box {
     width: 300px;
-    height: 400px;
     padding: 20px;
     background: linear-gradient($color-four, $color-five);
     display: flex;
@@ -46,6 +50,35 @@ $color-five: #bb8588;
     }
     div {
       width: 100%;
+      form {
+        width: 100%;
+        text-align: center;
+        input[type="text"] {
+          width: 90%;
+          height: 40px;
+          padding: 0 5px;
+          border: none;
+          background: rgba(255, 255, 255, 0.25);
+          border-radius: 5px;
+          outline: none;
+          margin-bottom: 20px;
+        }
+        input[type="button"] {
+          width: 50%;
+          padding: 15px 8px;
+          border-radius: 8px;
+          outline: none;
+          border: none;
+          transition: 0.3s;
+          font-size: 18px;
+          font-family: $font-to-all;
+        }
+        input[type="button"]:hover {
+          background-color: $color-three;
+          cursor: pointer;
+          box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+        }
+      }
     }
   }
 }
@@ -53,5 +86,5 @@ $color-five: #bb8588;
 .footer {
   width: 100%;
   height: 10vh;
-  background: linear-gradient($color-two, $color-three);
+  background-color: $color-two;
 }
